@@ -136,46 +136,44 @@
     
     <script>
         function calculateCircleArea() {
-            const radius = document.getElementById('radius').value;
+            let radius = document.getElementById('radius').value;
             radius = radius.trim();
-            radius = parseFloat(radius);
-            const area = Math.PI * Math.pow(radius, 2); // Area = πr²
-            document.getElementById('circle-area').value = area.toFixed(2); // Display result, rounded to 2 decimal places
+            //radius = parseFloat(radius);
+            const areaC = Math.PI * radius * radius; // Area = πr²
+            document.getElementById('circle-area').value = areaC.toFixed(2); // Display result, rounded to 2 decimal places
         }
 
         // Function to calculate the area of the triangle
         function calculateTriangleArea() {
-            const base = document.getElementById('triangle-base').value;
-            const height = document.getElementById('triangle-height').value;
+            let base = document.getElementById('triangle-base').value;
+            let height = document.getElementById('triangle-height').value;
             base = base.trim();
             base = parseFloat(base);
             height = height.trim();
             height = parseFloat(height);
-            const area = 0.5 * base * height; // Area = ½bh
-            document.getElementById('triangle-area').value = area.toFixed(2); // Display result, rounded to 2 decimal places
+            const areaT = 0.5 * base * height; // Area = ½bh
+            document.getElementById('triangle-area').value = areaT.toFixed(2); // Display result, rounded to 2 decimal places
         }
 
         // Function to calculate the area of the square
         function calculateSquareArea() {
-            const side = document.getElementById('square-side').value;
-            const area = Math.pow(side, 2); // Area = s²
+            let side = document.getElementById('square-side').value;
+            const areaS = Math.pow(side, 2); // Area = s²
             side = side.trim();
             side = parseFloat(side);
-            area = area.trim();
-            area = parseFloat(area);
-            document.getElementById('square-area').value = area.toFixed(2); // Display result, rounded to 2 decimal places
+            document.getElementById('square-area').value = areaS.toFixed(2); // Display result, rounded to 2 decimal places
         }
 
         // Function to calculate the area of the rectangle
         function calculateRectangleArea() {
-            const length = document.getElementById('rectangle-length').value;
-            const width = document.getElementById('rectangle-width').value;
+            let length = document.getElementById('rectangle-length').value;
+            let width = document.getElementById('rectangle-width').value;
             length = length.trim();
             length = parseFloat(length);
             width = width.trim();
             width = parseFloat(width);
-            const area = length * width; // Area = lw
-            document.getElementById('rectangle-area').value = area.toFixed(2); // Display result, rounded to 2 decimal places
+            const areaR = length * width; // Area = lw
+            document.getElementById('rectangle-area').value = areaR.toFixed(2); // Display result, rounded to 2 decimal places
         }
     </script>
 </body>
